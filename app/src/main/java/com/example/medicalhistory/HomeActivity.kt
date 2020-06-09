@@ -1,5 +1,6 @@
 package com.example.medicalhistory
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -9,8 +10,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
-//import net.simplifiedcoding.firebaseauthtutorial.R
-//import net.simplifiedcoding.firebaseauthtutorial.utils.logout
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeActivity : AppCompatActivity() {
@@ -26,6 +26,7 @@ class HomeActivity : AppCompatActivity() {
                 this,
                 navController, drawer_layout
         )
+
     }
 
     override fun onSupportNavigateUp(): Boolean {

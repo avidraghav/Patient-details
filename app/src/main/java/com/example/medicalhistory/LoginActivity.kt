@@ -7,9 +7,6 @@ import android.util.Patterns
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
-//import net.simplifiedcoding.firebaseauthtutorial.R
-//import net.simplifiedcoding.firebaseauthtutorial.utils.login
-//import net.simplifiedcoding.firebaseauthtutorial.utils.toast
 
 
 class LoginActivity : AppCompatActivity() {
