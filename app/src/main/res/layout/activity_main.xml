@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="@color/cardview_light_background"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -41,6 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/patientname">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/age1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="number">
@@ -65,7 +67,9 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/age">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/State1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text">
@@ -89,25 +93,26 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/age">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="text">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/City1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text">
 
-                </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputEditText>
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Symptoms"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="62dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-
+        app:endIconMode="dropdown_menu"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
 
@@ -119,17 +124,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/City">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="number">
-
-                </com.google.android.material.textfield.TextInputEditText>
-
+        <AutoCompleteTextView
+            android:id="@+id/Symptoms1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/AadharId"
+        android:id="@+id/Phonenumber"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="62dp"
@@ -139,12 +141,14 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:hint="Aadhar card number of patient"
+        android:hint="Phone number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:endIconMode="clear_text"
         app:layout_constraintTop_toBottomOf="@+id/Address">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Phonenumber1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="number">
@@ -167,9 +171,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="parent"
+        app:endIconMode="clear_text"
         app:layout_constraintTop_toTopOf="@+id/guideline">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Address1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text">
@@ -196,9 +202,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
+        app:endIconMode="clear_text"
         app:startIconDrawable="@drawable/abc_vector_test">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/patientname1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPersonName|text">
@@ -206,6 +214,17 @@
         </com.google.android.material.textfield.TextInputEditText>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Phonenumber" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
